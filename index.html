@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-icon">
+                <i class="fa-solid fa-earth-americas"></i>
+            </div>
+            <h1>Global Exchange</h1>
+            <p>Real-time currency calculator</p>
+        </header>
+
+        <main class="converter-box" id="converter-box">
+            <div class="currencies-list" id="currencies-list">
+                <!-- Currency rows will be injected here by JS -->
+            </div>
+            
+            <button class="add-currency-btn" id="add-currency-btn">
+                <i class="fa-solid fa-plus"></i> Add Currency
+            </button>
+        </main>
+        
+        <footer class="app-footer">
+            <p id="last-updated">Rates updated: Loading...</p>
+        </footer>
+    </div>
+
+    <!-- Template for a single currency row -->
+    <template id="currency-row-template">
+        <div class="currency-row">
+            <div class="currency-select-wrapper">
+                <div class="flag-icon"></div>
+                <select class="currency-select"></select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+            </div>
+            <div class="currency-input-wrapper">
+                <input type="number" class="currency-input" placeholder="0.00" min="0" step="any">
+            </div>
+            <button class="remove-btn" title="Remove currency"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
